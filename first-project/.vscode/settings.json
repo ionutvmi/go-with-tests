@@ -1,0 +1,15 @@
+{
+    "ego.power-tools": {
+        "buttons": [
+            {
+                "text": "Go Lint Full",
+                "tooltip": "Run the golangci-lint linter with all the checks.",
+                "action": {
+                    "type": "command",
+                    "command": "workbench.action.tasks.runTask",
+                    "arguments": ["GO Lint"]
+                }
+            }
+        ]
+    }
+}
