@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"go-with-tests/first-project/numbers"
+)
 
 type Person struct {
 	firstName string
@@ -23,4 +27,5 @@ func main() {
 
 	fmt.Println("this is p1 = ", p1)
 
+	numbers.ShowNumber()
 }
