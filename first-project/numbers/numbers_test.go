@@ -1,6 +1,9 @@
 package numbers
 
-import "testing"
+import (
+	"math/rand"
+	"testing"
+)
 
 func Test_getNumber(t *testing.T) {
 	type testCase struct {
@@ -27,5 +30,18 @@ func Test_getNumber(t *testing.T) {
 				t.Errorf("getNumber() = %v, want %v", got, tt.want)
 			}
 		})
+	}
+}
+
+// This function compares the stdout with the value provided in the output comment.
+// An elegant solution to allow this kind of testing.
+func ExampleShowNumber() {
+	ShowNumber()
+	// Output: The number is 10
+}
+
+func BenchmarkRandInt(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		rand.Int()
 	}
 }
