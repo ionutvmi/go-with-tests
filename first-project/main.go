@@ -13,6 +13,7 @@ func main() {
 	var p1 = Person{}
 
 	p1.firstName = "Mihai"
+	p1.lastName = "Snow"
 
 	if a > 15 {
 		fmt.Println("hello there")
