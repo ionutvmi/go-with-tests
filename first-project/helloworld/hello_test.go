@@ -4,7 +4,8 @@ import "testing"
 
 func TestHello(t *testing.T) {
 	type args struct {
-		name string
+		name     string
+		language string
 	}
 
 	type testCase struct {
@@ -24,10 +25,15 @@ func TestHello(t *testing.T) {
 			args: args{name: ""},
 			want: "Hello, World",
 		},
+		{
+			name: "should say hello in spanish",
+			args: args{name: "Mihai", language: "Spanish"},
+			want: "Hola, Mihai",
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := Hello(tt.args.name); got != tt.want {
+			if got := Hello(tt.args.name, tt.args.language); got != tt.want {
 				t.Errorf("Hello() = %v, want %v", got, tt.want)
 			}
 		})
