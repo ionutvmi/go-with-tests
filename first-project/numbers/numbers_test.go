@@ -37,7 +37,7 @@ func Test_getNumber(t *testing.T) {
 // An elegant solution to allow this kind of testing.
 func ExampleShowNumber() {
 	ShowNumber()
-	// Output: The number is 10
+	// Output: The number is 1
 }
 
 func BenchmarkRandInt(b *testing.B) {
