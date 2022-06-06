@@ -21,6 +21,20 @@ func TestSum(t *testing.T) {
 			},
 			want: 5,
 		},
+		{
+			name: "should return 0 if no numbers are provided",
+			args: args{
+				numbers: []int{},
+			},
+			want: 0,
+		},
+		{
+			name: "should return the same value if we have only one element in the list",
+			args: args{
+				numbers: []int{99},
+			},
+			want: 99,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
