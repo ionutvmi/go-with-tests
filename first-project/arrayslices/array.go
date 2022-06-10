@@ -25,3 +25,14 @@ func SumAll(args ...[]int) []int {
 
 	return result
 }
+
+// sum of all the elements except the first one (head)
+func SumTail(numbers []int) int {
+	if len(numbers) == 0 {
+		return 0
+	}
+
+	tail := numbers[1:]
+
+	return Sum(tail)
+}

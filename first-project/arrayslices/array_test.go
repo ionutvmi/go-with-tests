@@ -78,3 +78,32 @@ func TestSumAll(t *testing.T) {
 		})
 	}
 }
+
+func TestSumTail(t *testing.T) {
+	type args struct {
+		numbers []int
+	}
+
+	type testCase struct {
+		name string
+		args args
+		want int
+	}
+
+	tests := []testCase{
+		{
+			name: "Should gives us the sum of all elements except the first one",
+			args: args{
+				numbers: []int{99, 2, 3},
+			},
+			want: 5,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := SumTail(tt.args.numbers); got != tt.want {
+				t.Errorf("SumTail() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
