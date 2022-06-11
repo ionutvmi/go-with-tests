@@ -81,3 +81,33 @@ func roundFloat(val float64, precision uint) float64 {
 	ratio := math.Pow(10, float64(precision))
 	return math.Round(val*ratio) / ratio
 }
+
+func TestShapeArea(t *testing.T) {
+	type testCase struct {
+		name  string
+		shape Shape
+		want  float64
+	}
+
+	shapeTests := []testCase{
+		{
+			name:  "should calculate the area for a square",
+			shape: Rectangle{10, 10},
+			want:  100,
+		},
+		{
+			name:  "should calculate the area for a circle",
+			shape: Circle{10},
+			want:  314.1592653589793,
+		},
+	}
+
+	for _, tt := range shapeTests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := tt.shape.Area(); got != tt.want {
+				t.Errorf("Shape Area(), got = %v, want = %v", got, tt.want)
+			}
+		})
+	}
+
+}
