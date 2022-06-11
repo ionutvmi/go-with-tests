@@ -19,7 +19,7 @@ func TestGreetWithDI(t *testing.T) {
 			args: args{
 				name: "Mihai",
 			},
-			wantWriter: "Hello, Mihai!",
+			wantWriter: "Hello, Mihai!\n",
 		},
 	}
 	for _, tt := range tests {

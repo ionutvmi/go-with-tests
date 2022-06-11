@@ -6,5 +6,5 @@ import (
 )
 
 func GreetWithDI(writer io.Writer, name string) {
-	fmt.Fprintf(writer, "Hello, %s!", name)
+	fmt.Fprintf(writer, "Hello, %s!\n", name)
 }

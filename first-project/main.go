@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"go-with-tests/first-project/dependencyinjection"
+	"go-with-tests/first-project/mocking"
 	"go-with-tests/first-project/numbers"
 )
 
@@ -32,4 +33,6 @@ func main() {
 	numbers.ShowNumber()
 
 	dependencyinjection.GreetWithDI(os.Stdout, "Mihai")
+
+	mocking.Countdown(os.Stdout, mocking.DefaultSleeper{})
 }
