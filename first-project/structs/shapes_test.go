@@ -100,6 +100,11 @@ func TestShapeArea(t *testing.T) {
 			shape: Circle{10},
 			want:  314.1592653589793,
 		},
+		{
+			name:  "should calculate the area for a triangle",
+			shape: Triangle{12, 6},
+			want:  36.0,
+		},
 	}
 
 	for _, tt := range shapeTests {
