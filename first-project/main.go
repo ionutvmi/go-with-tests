@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"os"
 
+	"go-with-tests/first-project/dependencyinjection"
 	"go-with-tests/first-project/numbers"
 )
 
@@ -28,4 +30,6 @@ func main() {
 	fmt.Println("this is p1 = ", p1)
 
 	numbers.ShowNumber()
+
+	dependencyinjection.GreetWithDI(os.Stdout, "Mihai")
 }

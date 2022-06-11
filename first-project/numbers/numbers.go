@@ -22,5 +22,5 @@ func ShowNumber() {
 		return
 	}
 
-	fmt.Printf("The number is %d", n)
+	fmt.Printf("The number is %d\n", n)
 }
